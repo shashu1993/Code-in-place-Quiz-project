@@ -2,6 +2,8 @@ from random import randint
 import tkinter
 from PIL import ImageTk
 from PIL import Image
+import time
+
 
 questions = {1: "Who was the first president of the United States?",
              2: "What does the acronym 'REM' stand for?",
@@ -156,10 +158,14 @@ def main():
                 print("Wrong input, try again with A, B, C or D")
 
         if selected_ans == answers[q]:
+            print("You selected: " + selected_ans)
+            time.sleep(3)
             print("Great! Correct answer!")
             print("You have won: " + str(Winning_amt[i + 1]))
             continue
         else:
+            print("You selected: " + selected_ans)
+            time.sleep(5)
             print("Wrong answer!")
             break
     txt = 'Thanks for playing , your winnings are ' + Winning_amt[i + 1]
